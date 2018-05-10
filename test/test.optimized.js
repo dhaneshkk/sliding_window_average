@@ -1,7 +1,7 @@
 const expect = require('chai').expect;
-const sliding_window_average = require('../sliding_window_average');
+const sliding_window_average = require('../sliding_window_average_optimized');
 
-describe('sliding_window_average()', function () {
+describe('sliding_window_average()- optimized', function () {
   it('1. Sliding window length test ((n-k)+1)', function () {
     
     // 1. ARRANGE
