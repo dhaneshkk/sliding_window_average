@@ -37,11 +37,12 @@ function sliding_window_average(input_array, window_length=1)
     if(input_array.length >= window_length){
 
         for (let index = 0; index < input_array.length; index++) {
-
-            if(input_array.length-index >= window_length){
+            
+            //size of array_part shouldn't be less than given window length.  
+            if(input_array.length - index >= window_length){
                 
                 const end = index + window_length;
-                const sum = sum_array(input_array, index, end);
+                const sum = sum_array_part(input_array, index, end);
                 const average = sum/window_length;
                 output_array.push(average)        
             }
@@ -52,11 +53,11 @@ function sliding_window_average(input_array, window_length=1)
     return output_array 
 }
 
-function sum_array(input_array, start, end){
+function sum_array_part(input_array, part_start, part_end){
     
     let sum = 0;
     
-    for (let index = start; index < end ; index++) {
+    for (let index = part_start; index < part_end ; index++) {
         sum = sum + input_array[index];
     }
     
