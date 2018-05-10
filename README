@@ -1,0 +1,11 @@
+Getting started
+===============
+To run index.js
+
+npm start  
+
+Testing
+========
+To execute unit tests, execute following commands
+
+npm install && npm test
